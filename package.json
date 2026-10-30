@@ -1,0 +1,39 @@
+{
+  "name": "togomoto-industries",
+  "type": "module",
+  "version": "0.0.0",
+  "private": true,
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "setup": "node scripts/setup.mjs",
+    "dev": "astro dev",
+    "build": "astro build",
+    "start": "node ./dist/server/entry.mjs",
+    "preview": "astro build && node ./dist/server/entry.mjs",
+    "astro": "astro",
+    "check": "astro check",
+    "db:generate": "drizzle-kit generate",
+    "db:migrate": "drizzle-kit migrate",
+    "db:seed": "node scripts/seed.mjs",
+    "db:reset": "node scripts/setup.mjs --reset"
+  },
+  "dependencies": {
+    "astro": "5.18.2",
+    "drizzle-orm": "^0.45.2",
+    "drizzle-zod": "^0.8.3",
+    "marked": "^18.0.5",
+    "ultrahtml": "^1.6.0",
+    "zod": "^4.4.3",
+    "@astrojs/node": "9.5.4",
+    "mysql2": "^3.14.0",
+    "dotenv": "^16.4.7"
+  },
+  "devDependencies": {
+    "@astrojs/check": "^0.9.4",
+    "drizzle-kit": "^0.31.10",
+    "typescript": "^5.7.0",
+    "@types/node": "^22.10.0"
+  }
+}
